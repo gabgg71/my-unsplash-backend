@@ -10,6 +10,6 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use('/api/images', require('./routes/images'));
 
-app.listen(process.env.PORT, ()=>{
+app.listen(process.env.PORT || 8080, ()=>{
     console.log(`Running in port ${process.env.PORT}`);
 });
